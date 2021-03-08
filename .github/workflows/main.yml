@@ -4,14 +4,14 @@ on:
 
 jobs:
   build:
-    runs-on: desenvolvimento
+    runs-on: self-hosted
     steps:
       - name: Run a one-line script
         run: echo Hello, world!
 
 
   deploy-dev:
-    runs-on: desenvolvimento
+    runs-on: self-hosted
     environment: 
       name: desenvolvimento
       url: 'julioarruda.com'
@@ -21,7 +21,7 @@ jobs:
         run: echo Deploy Dev
 
   deploy-hmg:
-    runs-on: homologacao
+    runs-on: self-hosted
     environment: 
       name: homologacao
       url: 'julioarruda.com'
@@ -32,7 +32,7 @@ jobs:
 
 
   deploy-prd:
-    runs-on: producao
+    runs-on: self-hosted
     environment: 
       name: producao
       url: 'julioarruda.com'
