@@ -13,7 +13,7 @@ jobs:
   deploy-dev:
     runs-on: ubuntu-latest
     environment: 
-      name: dev
+      name: desenvolvimento
       url: 'julioarruda.com'
     needs: build
     steps:
@@ -23,7 +23,7 @@ jobs:
   deploy-hmg:
     runs-on: ubuntu-latest
     environment: 
-      name: hmg
+      name: homologacao
       url: 'julioarruda.com'
     needs: deploy-dev
     steps:
@@ -34,7 +34,7 @@ jobs:
   deploy-prd:
     runs-on: ubuntu-latest
     environment: 
-      name: prd
+      name: producao
       url: 'julioarruda.com'
     needs: deploy-hmg
     steps:
